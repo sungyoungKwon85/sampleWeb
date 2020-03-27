@@ -1,4 +1,4 @@
-package com.kkwonsy.sample.service.web.dto;
+package com.kkwonsy.sample.web.web.dto;
 
 import org.junit.Test;
 

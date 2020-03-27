@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  # localhost:8080/h2-console
+  # jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true

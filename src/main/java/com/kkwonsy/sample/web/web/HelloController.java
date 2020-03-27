@@ -1,10 +1,10 @@
-package com.kkwonsy.sample.service.web;
+package com.kkwonsy.sample.web.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kkwonsy.sample.service.web.dto.HelloResponseDto;
+import com.kkwonsy.sample.web.web.dto.HelloResponseDto;
 
 
 // JSON으로 반환하게 해줌
