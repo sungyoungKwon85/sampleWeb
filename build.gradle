@@ -18,7 +18,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management' // 스프링부트 의존성을 관리해주는 플러그인임 꼭필요함
 
 
-group 'com.kkwonsy.sample.web'
+group 'com.kkwonsy.sample.service'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -30,4 +30,11 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile('org.projectlombok:lombok')
+
+    // Add when @RequiredArgsConstructor & error: variable name not initialized in the default constructor
+    testCompile 'org.projectlombok:lombok'
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
 }
