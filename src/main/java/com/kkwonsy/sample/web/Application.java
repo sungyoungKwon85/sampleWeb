@@ -2,9 +2,10 @@ package com.kkwonsy.sample.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableJpaAuditing
+// test를 돌릴때 Auditing은 최소1개의 Entity가 필요한데 test에는 없어서 fail 난다.
+// 분리할 것
+//@EnableJpaAuditing
 @SpringBootApplication
 public class Application {
 
