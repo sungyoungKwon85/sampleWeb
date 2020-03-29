@@ -28,15 +28,24 @@ repositories {
 }
 
 dependencies {
+    // web
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
+    // jpa
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2')
 
+    // lombok
     compile('org.projectlombok:lombok')
     // Add when @RequiredArgsConstructor & error: variable name not initialized in the default constructor
-    testCompile 'org.projectlombok:lombok'
+    testCompile('org.projectlombok:lombok')
     annotationProcessor('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
+
+    // mustache (view template engine)
+    compile('org.springframework.boot:spring-boot-starter-mustache')
+
+    // security
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client') // 소셜 로그인 등 클라이언트 입장에서 필요한 의존성
 }

@@ -1,0 +1,38 @@
+{{>layout/header}}
+<h1>spring boot web service</h1>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-6">
+      <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+      {{#userName}}
+        Logged in as: <span id="user">{{userName}}</span>
+        <a href="/logout" role="button" class="btn btn-info active">Logout</a>
+      {{/userName}}
+      {{^userName}}
+        <a href="/oauth2/authorization/google" role="button" class="btn btn-success active">Google Login</a>
+      {{/userName}}
+    </div>
+    <br>
+    <table class="table table-horizontal table-bordered">
+      <thead class="thead-strong">
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>author</th>
+        <th>lastmodifiedDate</th>
+      </tr>
+      </thead>
+      <tbody id="tbody">
+      {{#posts}}
+        <tr>
+          <td>{{id}}</td>
+          <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+          <td>{{author}}</td>
+          <td>{{lastModifiedDate}}</td>
+        </tr>
+      {{/posts}}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{>layout/footer}}
