@@ -34,7 +34,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: kkwonsy-build
-    api_key: kkwonsy-sample-web.zip
+    key: kkwonsy-sample-web.zip
     bundle_type: zip
     application: kkwonsy-sample-web
     deployment_group: kkwonsy-sample-web-group
