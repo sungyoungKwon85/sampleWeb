@@ -14,6 +14,22 @@ cache:
 
 script: "./gradlew clean build"
 
+before_deploy:
+  - zip -r kkwonsy-sample-web *
+  - mkdir -p deploy
+  - mv kkwonsy-sample-web.zip deploy/kkwonsy-sample-web.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # this is in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: kkwonsy-build
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 파일 접근
+    local_dir: deploy # directory from before_deploy
+    wait-until-deployed: true
+
 # Alarm by email when CI complete
 notifications:
   email:
