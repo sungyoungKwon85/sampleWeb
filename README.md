@@ -1,4 +1,4 @@
-# sampleWeb
+# kkwonsy-sample-web
 
 ## stack
 - Java 8
