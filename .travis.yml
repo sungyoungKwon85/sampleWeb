@@ -15,7 +15,7 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - pwd
+  - ls -al
   - mkdir -p before-deploy
   - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
