@@ -19,7 +19,7 @@ apply plugin: 'io.spring.dependency-management' // 스프링부트 의존성을 
 
 
 group 'com.kkwonsy.sample.web'
-version '1.0-SNAPSHOT'
+version '1.0.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
